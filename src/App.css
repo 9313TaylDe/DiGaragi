@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body,
+html,
+main {
+  background-color: #161010;
+}
+
+.main-content {
+  padding: 12px;
+}
+
+.container-home {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 0.8em;
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  height: 1.8em;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.input-icon {
+  position: absolute;
+  right: 16.7px;
+  cursor: pointer;
+  color: #5e5a5a;
+  pointer-events: auto;
+}
+.input-icon:hover {
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 1200px) {
+  .card-product {
+    flex: 1 1 calc(33.333% - 16px);
+  }
+  .logodigarage {
+    width: auto;
+    height: 100%;
+    background-size: cover;
+  }
+}

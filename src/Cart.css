@@ -1,0 +1,252 @@
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1px;
+  padding-top: 8px;
+  background-color: #161010;
+}
+
+.cart-container h3,
+.cart-container p {
+  align-items: center;
+  font-size: 17px;
+  color: #f76f01;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.cart-container h3 {
+  width: 50%;
+}
+
+.realizar-compra {
+  width: max-content;
+  background-color: #f76f01;
+  border: none;
+  padding: 5px;
+  border-radius: 12px;
+}
+.cart-container p {
+  font-weight: bold;
+}
+.cart-container-cont {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-container-cont .card-products {
+  min-height: 50%;
+  height: auto;
+  min-width: 22%;
+  width: 30%;
+  padding: 2px;
+  border-radius: 12px;
+}
+
+.cart-container-cont .card-img {
+  display: flex;
+  height: 100%;
+  width: auto;
+  min-width: 100%;
+}
+
+.cart-container .card-products .card-img {
+  width: 30%;
+  height: 10%;
+}
+
+.card-products-cart {
+  width: 300px;
+}
+
+.copiarCodigo {
+  background-color: blue;
+}
+@media (min-width: 100px) and (min-height: 100px) {
+  .cart-container {
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 5vh;
+  }
+
+  .cart-container-cont {
+    height: max-content;
+    width: 100%;
+  }
+
+  .card-products-cart .card-products {
+    width: 20%;
+  }
+
+  .main-content {
+    min-height: 74vh;
+    width: 100%;
+  }
+
+  .cart-container h3,
+  .cart-container p {
+    font-size: 13px;
+  }
+
+  .cart-container-cont {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+  }
+  .cart-container .minus-shooping {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .cart-container-cont p {
+    font-size: 0;
+  }
+
+  .cart-container-cont img {
+    width: 100%;
+  }
+  .realizar-compra {
+    height: 50%;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 350px) and (min-height: 300px) {
+  .cart-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cart-container-cont {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 400px) {
+  .cart-container-cont {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) and (min-height: 896px) {
+  .cart-container-cont {
+    min-height: 100%;
+    height: max-content;
+    width: auto;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .main-content {
+    min-height: 72.4vh;
+  }
+  .realizar-compra {
+    height: max-content;
+  }
+
+  .cart-container {
+    max-width: 100%;
+    min-width: 80%;
+    width: auto;
+    min-height: max-content;
+    max-height: 100%;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .cart-container .card-products {
+    max-width: 45%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .cart-container .minus-shooping {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+  .cart-container-cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cart-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cart-container-cont .card-products {
+    width: 20%;
+    height: 90%;
+    max-height: max-content;
+  }
+
+  .main-content {
+    min-height: 76vh;
+  }
+
+  .container-products {
+    min-width: 90vw;
+    width: 100%;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 896px) {
+  .container-products {
+    min-width: 100%;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .main-content {
+    min-height: 70vh;
+  }
+
+  .container-products .card-products {
+    width: 23.5%;
+    height: max-content;
+  }
+}
+@media (min-width: 1200px) {
+  .cart-container {
+    max-width: 100%;
+    min-width: 90%;
+    min-height: 50vh;
+  }
+
+  .main-content {
+    min-height: 94vh;
+  }
+
+  .cart-container-cont {
+    min-width: 100%;
+    height: max-content;
+    height: max-content;
+  }
+
+  .card-products {
+    max-width: 40%;
+    width: 15%;
+    height: auto;
+    max-height: max-content;
+  }
+}

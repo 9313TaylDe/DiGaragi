@@ -1,0 +1,142 @@
+.footer {
+  min-width: 100%;
+  width: 100%;
+  max-height: max-content;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #161010; */
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.linkss {
+  height: 1em;
+  width: 1em;
+}
+.icon-link {
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  color: red;
+}
+
+#link-whatsapp:hover {
+  background: linear-gradient(green, green, green, green, white);
+  border-radius: 100%;
+}
+
+.icon-link {
+  color: pink;
+}
+
+#link-instagram:hover {
+  background: linear-gradient(red, blue);
+  border-radius: 100%;
+}
+
+#link-github:hover {
+  background: linear-gradient(gray, black);
+  border-radius: 100%;
+}
+.sociais-footer {
+  padding: 9px 3px;
+  display: flex;
+  gap: 22px;
+}
+
+.icones {
+  font-size: 10px;
+}
+
+.pi {
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.descricao-digaraggi {
+  font-size: 20px;
+  color: white;
+}
+
+.rodapee {
+  color: white;
+}
+@media (min-width: 350px) and (min-height: 450px) {
+  .card-product {
+    flex: 1 1 100%;
+  }
+  .footer {
+    margin-top: 1.9em;
+    min-height: max-content;
+    display: flex;
+    max-width: 100%;
+    padding: 9px;
+    /* background-color: #231818; */
+  }
+  .footer .descricao-digaraggi {
+    font-size: 14px;
+    color: white;
+  }
+
+  .rodapee {
+    width: 100%;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 400px) and (min-height: 450px) {
+  .footer {
+    min-height: max-content;
+  }
+}
+
+@media (min-width: 500px) and (min-height: 896px) {
+  .footer {
+    height: max-content;
+    display: flex;
+    min-width: 100%;
+  }
+  .footer .descricao-digaraggi {
+    font-size: 26px;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: 900px) and (min-height: 896px) {
+  .footer {
+    max-height: max-content;
+    align-items: center;
+    display: flex;
+  }
+}
+
+@media (min-width: 1536px) {
+  .footer {
+    gap: 1em;
+  }
+
+  .footer-main {
+    gap: 1em;
+  }
+  .icon-link {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1700px) {
+  .footer {
+    display: flex;
+  }
+}

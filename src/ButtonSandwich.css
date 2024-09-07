@@ -1,0 +1,79 @@
+/* Estilos do menu */
+.menu-hambueger {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border: none;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  color: gold;
+  border-radius: 0 20px 20px 0;
+}
+
+.menu-mobile-elements-show {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #0056b3;
+  height: 100%;
+  z-index: 1;
+  color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-mobile-elements-show li {
+  list-style: none;
+  margin-top: 3px;
+  padding: 25px 0;
+  color: gold;
+  width: 100%;
+  background-color: red;
+}
+
+.menu-mobile-elements-show .link {
+  color: gold;
+  text-decoration: none;
+}
+
+.menu-mobile-elements-show:hover {
+  transform: translateX(
+    0
+  ); /* Confirmado para a transformação ao passar o mouse */
+}
+
+.menu-mobile-elements-show .link:hover {
+  color: #0056b3; /* Confirmado para a cor ao passar o mouse */
+}
+
+.pi-bars {
+  border-radius: 5px;
+  height: 35px;
+  width: 27px;
+  color: #f76f01;
+}
+.pi-times {
+  color: #f76f01;
+  border-radius: 5px;
+  height: 35px;
+  width: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1001;
+  top: 12px;
+  right: 12px;
+}
+
+.menu-sandwich-elementsshow.show {
+  transform: translateX(0);
+}
