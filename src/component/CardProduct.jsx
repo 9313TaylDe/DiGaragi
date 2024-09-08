@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import "../Card.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import imgProduct from "../assets/images/product.png";
 import { CartContext } from "../pages/CartProvider";
-import ProductView from "../pages/ProductDetails";
+
 const CardProduct = ({
   taxaEntrega,
   id,
@@ -17,6 +16,7 @@ const CardProduct = ({
   addToCart,
   removeFromCart,
 }) => {
+  const { productId } = useParams(); // Captura o ID da URL
   const navigate = useNavigate();
   const { cart } = useContext(CartContext);
   const [isAdded, setIsAdded] = useState(false);
@@ -47,7 +47,7 @@ const CardProduct = ({
   };
 
   const HandlePageClick = () => {
-    navigate(`/products/{id}/`);
+    navigate(`/products/${id}/`);
   };
 
   return (
@@ -63,10 +63,7 @@ const CardProduct = ({
           <p className="newprice">{newprice}</p>
         </div>
         {isAdded ? (
-          <div
-            className="minus-shooping
-"
-          >
+          <div className="minus-shopping">
             <Link onClick={handleRemoveFromCart} className="pi pi-minus"></Link>{" "}
             <Link
               id="iconcartlink"

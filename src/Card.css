@@ -22,6 +22,22 @@ main {
   gap: 19px;
 }
 
+.listSuggestions {
+  width: max-content;
+  top: 35px;
+  position: absolute;
+  height: auto;
+  display: hidden;
+  background-color: #fff;
+  z-index: 2;
+  padding: 10px;
+}
+
+.listSuggestions .listaS {
+  list-style: none;
+  color: orange;
+}
+
 /* Estilos para o card de produtos */
 .card-products {
   padding: 2px;

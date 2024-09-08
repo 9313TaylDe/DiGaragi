@@ -11,6 +11,8 @@ import CartProvider from "./pages/CartProvider";
 import Whatsapp from "./pages/Whatsapp";
 import ProductView from "./pages/ProductDetails";
 import PaymentCode from "./pages/PaymentCode";
+import InputSearch from "./component/InputSearch";
+import ListaProducts from "./component/ListaProducts";
 const App = () => {
   return (
     <CartProvider>
@@ -20,7 +22,13 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/payment-code" element={<Cart />} />
-            <Route path="/products/:productId" element={<ProductView />} />
+            <Route
+              path="/"
+              element={
+                <InputSearch products={ListaProducts} placeholder="Buscar" />
+              }
+            />
+            <Route path="/product/:id" element={<ProductView />} />
           </Routes>
         </div>
       </Layout>

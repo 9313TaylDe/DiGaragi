@@ -1,27 +1,32 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { CartContext } from "../pages/CartProvider";
+import { useParams } from "react-router-dom";
 import CardProduct from "../component/CardProduct";
+import ListaProducts from "../component/ListaProducts";
+import { CartContext } from "../pages/CartProvider";
 
 const ProductDetails = () => {
-  const { products } = useContext(CartContext);
-  const navigate = useNavigate();
+  const { id } = useParams(); // Pegando o id da URL
+  const { addToCart, removeFromCart } = useContext(CartContext);
 
-  const handleProductClick = (id) => {
-    navigate(`/product/${id}`);
-  };
+  // Encontrando o produto na lista de produtos pelo id
+  const product = ListaProducts.find((item) => item.id === parseInt(id));
+
+  if (!product) {
+    return <h2>Produto não encontrado</h2>;
+  }
 
   return (
-    <div className="product-list">
-      <CardProduct title={"tenis"} price={"R$20,00"} />
-      <div>
-        <p>Descrição</p>
-        <p>ACOMPANHA CARNE, QUEIJO, PRESUNTO, ALFACE, MILHO COM ERVILHA</p>
-        <p>Descrição</p>
-        <p>ACOMPANHA CARNE, QUEIJO, PRESUNTO, ALFACE, MILHO COM ERVILHA</p>
-        <p>Descrição</p>
-        <p>ACOMPANHA CARNE, QUEIJO, PRESUNTO, ALFACE, MILHO COM ERVILHA</p>
-      </div>
+    <div className="product-details">
+      <CardProduct
+        id={product.id}
+        title={product.title}
+        image={product.image}
+        price={product.price}
+        newprice={product.newprice}
+        description={product.description}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+      />
     </div>
   );
 };

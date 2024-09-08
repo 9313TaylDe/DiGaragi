@@ -1,16 +1,27 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const InputSearch = ({ icon, placeholder, onSearch }) => {
-  const [search, setOnserach] = useState(false);
-  const [searchTherm, setSearchTherm] = useState("");
-  const handleSearchChange = (event) => {
-    setSearchTherm(event.target.value);
+const InputSearch = ({ icon, placeholder, products = [] }) => {
+  const [inputValue, setInputValue] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setInputValue(value);
+
+    if (value) {
+      // Filtrando sugestões a partir da lista de produtos
+      const filteredSuggestions = products.filter((product) =>
+        product.title.toLowerCase().includes(value.toLowerCase())
+      );
+      setSuggestions(filteredSuggestions);
+    } else {
+      setSuggestions([]);
+    }
   };
 
-  const handleIconClick = (event) => {
-    if (onSearch) {
-      onSearch(searchTherm);
-    }
+  const handleOptionClick = () => {
+    setSuggestions([]);
   };
 
   return (
@@ -19,10 +30,22 @@ const InputSearch = ({ icon, placeholder, onSearch }) => {
         className="input-field"
         type="text"
         placeholder={placeholder}
-        value={searchTherm}
+        value={inputValue}
         onChange={handleSearchChange}
       />
-      <i className={`pi ${icon} input-icon`} onClick={handleIconClick}></i>
+      <i className={`pi ${icon} input-icon`}></i>
+
+      {inputValue && suggestions.length > 0 && (
+        <section className="listSuggestions">
+          <ul>
+            {suggestions.map((product, index) => (
+              <li key={index} onClick={handleOptionClick}>
+                <Link to={`/product/${product.id}`}>{product.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   );
 };

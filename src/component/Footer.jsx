@@ -8,10 +8,9 @@ const Footer = () => {
       <footer className="footer">
         <span className="footer-main">
           <p className="descricao-digaraggi">
-            DiGarragi surgiu em 2019 com o intuito
-            <br /> de ser uma das grandes oções de
-            <br />
-            lanchonetes da região
+            DiiGarage surgiu em 2019 com o intuito <br />
+            de ser uma das grandes oções para os
+            <br /> amantes de um bom lanche caseiro.
           </p>
           <span className="icones">
             <WhatsappButton />

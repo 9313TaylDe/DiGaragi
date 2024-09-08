@@ -1,5 +1,6 @@
 import Products from "./Products";
 import InputSearch from "./InputSearch";
+import ListaProducts from "./ListaProducts";
 const Home = () => {
   const performSearch = (searchTherm) => {
     console.log("Termo de pesquisa recebido no header", searchTherm);
@@ -11,7 +12,7 @@ const Home = () => {
           <InputSearch
             icon="pi-search"
             placeholder="Pesquisar"
-            onSearch={performSearch}
+            products={ListaProducts}
           />
           <Products />
         </section>

@@ -30,7 +30,6 @@ const ListaProducts = [
     id: 4,
     title: "Produto 4",
     taxaEntrega: "5.00",
-
     price: "199.99",
     newprice: "1.99",
     image: "tenis.jpg",
@@ -40,7 +39,6 @@ const ListaProducts = [
     id: 5,
     title: "Produto 5",
     taxaEntrega: "5.00",
-
     price: "199.99",
     newprice: "1.99",
     image: "tenis.jpg",
@@ -49,9 +47,8 @@ const ListaProducts = [
   {
     id: 6,
     title: "Produto 6",
-    price: "199.99",
     taxaEntrega: "5.00",
-
+    price: "199.99",
     newprice: "1.99",
     image: "tenis.jpg",
     description: "Produto",
@@ -60,7 +57,6 @@ const ListaProducts = [
     id: 7,
     title: "Produto 7",
     taxaEntrega: "5.00",
-
     price: "199.99",
     newprice: "1.99",
     image: "tenis.jpg",
@@ -68,10 +64,8 @@ const ListaProducts = [
   },
   {
     id: 8,
-
-    taxaEntrega: "5.00",
-
     title: "Produto 8",
+    taxaEntrega: "5.00",
     price: "199.99",
     newprice: "1.99",
     image: "tenis.jpg",
@@ -80,19 +74,18 @@ const ListaProducts = [
   {
     id: 9,
     title: "Produto 9",
+    taxaEntrega: "5.00",
     price: "199.99",
     newprice: "1.99",
-    taxaEntrega: "5.00",
     image: "tenis.jpg",
     description: "Produto",
   },
   {
     id: 10,
     title: "Produto 10",
+    taxaEntrega: "5.00",
     price: "199.99",
     newprice: "1.99",
-    taxaEntrega: "5.00",
-
     image: "tenis.jpg",
     description: "Produto",
   },
@@ -100,7 +93,6 @@ const ListaProducts = [
     id: 11,
     title: "Produto 11",
     taxaEntrega: "5.00",
-
     price: "199.99",
     newprice: "1.99",
   },
@@ -108,9 +100,9 @@ const ListaProducts = [
     id: 12,
     title: "Produto 12",
     taxaEntrega: "5.00",
-
     price: "199.99",
     newprice: "1.99",
   },
 ];
+
 export default ListaProducts;
