@@ -37,7 +37,10 @@ main {
   list-style: none;
   color: orange;
 }
-
+.lista {
+  text-decoration: none;
+  color: black;
+}
 /* Estilos para o card de produtos */
 .card-products {
   padding: 2px;

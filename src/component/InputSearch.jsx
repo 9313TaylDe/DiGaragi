@@ -39,8 +39,10 @@ const InputSearch = ({ icon, placeholder, products = [] }) => {
         <section className="listSuggestions">
           <ul>
             {suggestions.map((product, index) => (
-              <li key={index} onClick={handleOptionClick}>
-                <Link to={`/product/${product.id}`}>{product.title}</Link>
+              <li key={index} onClick={handleOptionClick} className="listaNone">
+                <Link className="lista" to={`/product/${product.id}`}>
+                  {product.title}
+                </Link>
               </li>
             ))}
           </ul>
