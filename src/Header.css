@@ -4,7 +4,7 @@
   min-width: max-content;
   height: 3em;
   max-height: 100%;
-  background-color: #231818;
+  background-color: #161010;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +42,14 @@
   background-color: transparent;
   border: none;
 }
-
+@media (min-width: 280px) and (min-height: 300px) {
+  .header i {
+    font-size: 17px;
+  }
+  .container-menumain {
+    gap: 5px;
+  }
+}
 @media (min-width: 350px) and (min-height: 450px) {
   .header {
     width: 100%;

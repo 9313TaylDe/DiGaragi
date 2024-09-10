@@ -1,0 +1,27 @@
+.product-details {
+  width: 100%;
+  min-height: 10vh;
+  border: 1px dashed wheat;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+.descriptionPage {
+  display: flex;
+  color: white;
+  /* border: 1px dashed white; */
+  font-size: 17px;
+  width: auto;
+  align-items: flex-start;
+  height: max-content;
+}
+
+.tituloPrincipal h2 {
+  padding: 3px;
+  color: wheat;
+  border: 1px solid #f76f01;
+  width: max-content;
+  border-radius: 10px 0 10px 0;
+}

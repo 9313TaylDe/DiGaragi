@@ -28,7 +28,7 @@ const App = () => {
                 <InputSearch products={ListaProducts} placeholder="Buscar" />
               }
             />
-            <Route path="/product/:id" element={<ProductView />} />
+            <Route path={`/product/:id`} element={<ProductView />} />
           </Routes>
         </div>
       </Layout>

@@ -9,11 +9,11 @@ const Home = () => {
     <>
       <div>
         <section className="container-home">
-          <InputSearch
+          {/* <InputSearch
             icon="pi-search"
             placeholder="Pesquisar"
             products={ListaProducts}
-          />
+          /> */}
           <Products />
         </section>
       </div>

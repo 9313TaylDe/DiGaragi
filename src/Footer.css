@@ -70,6 +70,21 @@
 .rodapee {
   color: white;
 }
+
+@media (min-width: 280px) and (min-height: 450px) {
+  .footer {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .descricao-digaraggi {
+    font-size: 12px;
+  }
+
+  .rodapee {
+    font-size: 12px;
+  }
+}
 @media (min-width: 350px) and (min-height: 450px) {
   .card-product {
     flex: 1 1 100%;

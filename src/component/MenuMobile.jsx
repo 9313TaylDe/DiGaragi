@@ -13,7 +13,7 @@ const MenuMobile = () => {
         <div className="menu-hambueger" onClick={toggleMenu}>
           <button
             onClick={toggleMenu}
-            className={`pi ${isOpen && "pi-times"}`}
+            className={`pi ${isOpen && "pi-angle-left"}`}
             id="button-open-menu"
           ></button>
 

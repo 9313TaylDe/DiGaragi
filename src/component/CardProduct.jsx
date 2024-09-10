@@ -15,11 +15,15 @@ const CardProduct = ({
   newprice,
   addToCart,
   removeFromCart,
+  products = [],
 }) => {
   const { productId } = useParams(); // Captura o ID da URL
   const navigate = useNavigate();
   const { cart } = useContext(CartContext);
   const [isAdded, setIsAdded] = useState(false);
+  const [sugestions, setSugestions] = useState([]);
+
+  const handleClickDeatails = () => {};
 
   useEffect(() => {
     // Verifique se o produto está no carrinho
@@ -47,12 +51,14 @@ const CardProduct = ({
   };
 
   const HandlePageClick = () => {
-    navigate(`/products/${id}/`);
+    navigate(`/product/${id}/`);
+    setSugestions([]);
   };
 
   return (
     <div className="card-products">
-      <div className="card-img" onClick={HandlePageClick}>
+      <div className="card-img">
+        <i className="pi pi-info-circle" onClick={HandlePageClick}></i>
         {discount && <span className="discount-badge">{discount}</span>}
         <img className="imgProduct" src={imgProduct} alt={title} />
       </div>
@@ -63,17 +69,17 @@ const CardProduct = ({
           <p className="newprice">{newprice}</p>
         </div>
         {isAdded ? (
-          <div className="minus-shopping">
-            <Link onClick={handleRemoveFromCart} className="pi pi-minus"></Link>{" "}
+          <>
+            <Link onClick={handleRemoveFromCart} className="pi pi-trash"></Link>{" "}
             <Link
               id="iconcartlink"
               className="pi pi-shopping-cart"
               to="/cart"
             />
-          </div>
+          </>
         ) : (
-          <Link className="pi-icones-card" onClick={handleAddToCart}>
-            <i className="pi pi-plus"></i>
+          <Link className="pi-icones" onClick={handleAddToCart}>
+            <i className="pi pi-plus-circle"></i>
           </Link>
         )}
       </div>

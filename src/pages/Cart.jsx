@@ -49,7 +49,7 @@ const Cart = () => {
       ) : (
         <>
           <button className="realizar-compra" onClick={generatePixPaymentLink}>
-            Gerar link de pagamento PIX
+            Gerar link PIX
           </button>
           <div className="cart-container-cont">
             {cart.map((product) => (

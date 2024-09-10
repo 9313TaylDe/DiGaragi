@@ -20,23 +20,58 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   width: 100%;
-  background-color: #0056b3;
+  background-color: #161010;
   height: 100%;
   z-index: 1;
-  color: black;
   transition: transform 0.3s ease-in-out;
+  margin-left: 4px;
+}
+
+.menu-mobile-elements-show li:hover {
+  background-color: #f76f01;
 }
 
 .menu-mobile-elements-show li {
   list-style: none;
-  margin-top: 3px;
-  padding: 25px 0;
+  margin-top: 13px;
+  padding: 6px 0;
   color: gold;
-  width: 100%;
-  background-color: red;
+  width: 20%;
+  height: max-content;
+  border: 1px dashed #f76f01;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button-close-menu {
+  width: auto;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  font-size: 19px;
+  border-radius: 2px;
+}
+.pi-bars {
+  color: #f76f01;
+}
+
+.pi-angle-left {
+  color: #f76f01;
+  border-radius: 5px;
+  height: 35px;
+  width: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1001;
+  top: 12px;
+  right: 8px;
 }
 
 .menu-mobile-elements-show .link {
@@ -51,29 +86,36 @@
 }
 
 .menu-mobile-elements-show .link:hover {
-  color: #0056b3; /* Confirmado para a cor ao passar o mouse */
-}
-
-.pi-bars {
-  border-radius: 5px;
-  height: 35px;
-  width: 27px;
-  color: #f76f01;
-}
-.pi-times {
-  color: #f76f01;
-  border-radius: 5px;
-  height: 35px;
-  width: 27px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 1001;
-  top: 12px;
-  right: 12px;
+  color: black; /* Confirmado para a cor ao passar o mouse */
 }
 
 .menu-sandwich-elementsshow.show {
   transform: translateX(0);
+}
+
+@media (min-width: 800px) and (min-height: 600px) {
+  #button-close-menu {
+    width: auto;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    font-size: 28px;
+    border-radius: 4px;
+  }
+  .menu-mobile-elements-show {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #161010;
+    height: 100%;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 4px;
+  }
+  .menu-mobile-elements-show li {
+    width: 10%;
+  }
 }
