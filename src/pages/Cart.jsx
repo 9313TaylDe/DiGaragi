@@ -42,32 +42,37 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-container">
-      <h3>Total: R$ {calculateTotal().toFixed(2)}</h3>
-      {cart.length === 0 ? (
-        <p>Adicione produtos.</p>
-      ) : (
-        <>
-          <button className="realizar-compra" onClick={generatePixPaymentLink}>
-            Gerar link PIX
-          </button>
-          <div className="cart-container-cont">
-            {cart.map((product) => (
-              <CardProduct
-                key={product.id}
-                id={product.id}
-                image={product.image}
-                title={product.title}
-                price={product.price}
-                newprice={product.newprice}
-                discount={product.discount}
-                removeFromCart={removeFromCart}
-                cart={cart}
-              />
-            ))}
-          </div>
-        </>
-      )}
+    <div className="container-cart">
+      <div className="cart-container">
+        <h3>Total: R$ {calculateTotal().toFixed(2)}</h3>
+        {cart.length === 0 ? (
+          <p>Adicione produtos.</p>
+        ) : (
+          <>
+            <button
+              className="realizar-compra"
+              onClick={generatePixPaymentLink}
+            >
+              Gerar link PIX
+            </button>
+            <div className="cart-container-cont">
+              {cart.map((product) => (
+                <CardProduct
+                  key={product.id}
+                  id={product.id}
+                  image={product.image}
+                  title={product.title}
+                  price={product.price}
+                  newprice={product.newprice}
+                  discount={product.discount}
+                  removeFromCart={removeFromCart}
+                  cart={cart}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
       <ToastContainer /> {/* Componente para exibir notificações */}
     </div>
   );

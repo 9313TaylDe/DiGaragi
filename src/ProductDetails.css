@@ -1,7 +1,7 @@
 .product-details {
   width: 100%;
   min-height: 10vh;
-  border: 1px dashed wheat;
+  /* border: 1px dashed wheat; */
   display: flex;
   /* align-items: center; */
   /* justify-content: space-between; */

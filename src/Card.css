@@ -108,7 +108,9 @@ main {
 .pi-shopping-cart {
   background: transparent;
   color: #f76f01;
-  padding: 12px;
+  margin-top: 8px;
+  padding: 8px 4px;
+  font-size: 16px;
 }
 
 /* Títulos e preços */
@@ -281,9 +283,10 @@ main {
 
 @media (min-width: 1500px) {
   .container-products {
-    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
     display: flex;
-    gap: 3.9em;
+    gap: 1em;
   }
 
   .main-content {
@@ -292,7 +295,7 @@ main {
   }
 
   .card-products {
-    max-width: 76%;
+    max-width: 23%;
     width: 100%;
     height: auto;
     /* max-height: max-content; */
@@ -300,7 +303,7 @@ main {
 }
 @media (min-width: 1700px) {
   .container-products {
-    max-width: 100%;
+    min-width: 100%;
     display: flex;
     gap: 1em;
   }
@@ -308,7 +311,7 @@ main {
   .card-products {
     max-width: 100%;
     min-width: 10%;
-    width: 55%;
+    width: 22%;
     height: auto;
     min-height: max-content;
   }

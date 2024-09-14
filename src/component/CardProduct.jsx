@@ -60,7 +60,7 @@ const CardProduct = ({
       <div className="card-img">
         <i className="pi pi-info-circle" onClick={HandlePageClick}></i>
         {discount && <span className="discount-badge">{discount}</span>}
-        <img className="imgProduct" src={imgProduct} alt={title} />
+        <img className="imgProduct" src={image} alt={title} />
       </div>
       <div className="container-infos">
         <p className="title">{title}</p>

@@ -229,7 +229,7 @@
 @media (min-width: 1200px) {
   .cart-container {
     max-width: 100%;
-    min-width: 90%;
+    min-width: 100%;
     min-height: 50vh;
   }
 
@@ -240,20 +240,16 @@
   .cart-container-cont {
     min-width: 100%;
     height: max-content;
-    height: max-content;
   }
-
-  .card-products {
-    max-width: 40%;
-    width: 15%;
+  .cart-container-cont .card-products {
+    max-width: 10%;
+    width: 100%;
     height: auto;
     max-height: max-content;
   }
-
   @media (min-width: 1500px) {
     .cart-container {
-      min-width: max-content;
-      background-color: red;
+      width: max-content;
     }
 
     .cart-container-cont .card-products {
